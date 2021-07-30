@@ -2,21 +2,71 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+
 <title>Insert title here</title>
 </head>
 <body>
+	<h1>이벤트</h1>
 	
-	<ul>
-		<li id="first" class="red">첫번째 아이템입니다.</li>
-		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
-		<li id="third" class="del">세번째아이템입니다.</li>
-		<li><strong>네번째 아이템입니다.</strong></li>
-		
-	</ul>
+	<h2>h2태그_1</h2>
+	<h2>h2태그_2</h2>
+	<h2>h2태그_3</h2>
+	
+	
+	<h3 class="tagh3">h3태그_1</h3>
+	<h3 class="tagh3">h3태그_2</h3>
+	<h3 class="tagh3">네이버</h3>
+	<h3 class="tagh3">다음</h3>
+	
+	<div>
+		<button id="btn">자바스크립트 테스트 버튼 </button>
+		<p id="dissplay">이름 출력영역</p>
+	</div>
+	
+	
 
 </body>
+<script type="text/javascript">
+
+	//문서의 모든 요소가 로딩된 후 function()의 내용이 실행 되라
+	window.onload = function(){
+		
+		//id가져오기
+		var testButton = document.getElementById("btn");
+		var testArea = document.getElementById("dissplay");
+		
+		//html 태그로 가져오기
+		var h2Array = document.getElementsByTagName("h2");
+		var h1Array = document.getElementsByTagName("h1");
+		console.log(h2Array);
+		
+		//클래스로 가져오기
+		var h3Array = document.getElementsByClassName("tagh3");
+		console.log(h3Array);
+		
+		console.log(testButton);
+		console.log(testArea);
+		
+		//id가 "btn"인 버튼을 클릭할때 function()에 정의된 대로 작동해라.
+		testButton.onclick = function(){
+			testArea.innerHTML ="홍길동";
+			
+		};
+	
+		//h2 태그의 2번째를 클릭할때  function()에 정의된 대로 작동해라.
+		console.log(h2Array[1]);
+		h2Array[1].onclick = function(){
+			testArea.innerHTML = "정우성";
+		}
+		
+		//h
+		h3Array[3].onclick = function(){
+			h1Array[0].innerHTML = "naver"
+		}
+		
+	};
 
 
+</script>
 
 </html>

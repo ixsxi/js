@@ -2,21 +2,64 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
 
 <body>
 
-	<ul>
-		<li>첫번째 아이템입니다.</li>
-		<li>두번째 아이템입니다.</li>
-		<li class="del">삭제할  아이템입니다.</li>
-		<li>네번째 아이템입니다.</li>
-		<li class="del">삭제할  아이템입니다.</li>
-		<li>다섯 번째 아이템입니다.</li>
-	</ul>
+	<script type="text/javascript">
+	
+	//이름이 있는함수 (기명함수 , 선언적함수)
+	
+	//함수정의(메소드 같은거)
+	function plus(a, b){
+		var sum = a + b;
+		
+		return sum;
+	}
+	
+	
+	
+	var plusSum = plus(3,5);
+	console.log(plusSum);
+	document.write(plusSum);
+	
+	
+	
+	var result = plus(2.7,5.8);
+	console.log(result)
+	
+	
+	var result2 = plus("안녕","하세요");
+	console.log(result2)
+	
+	
+	
+	//이름이 없는함수 (기명함수 , 선언적함수) -->이름이 없어서 바로 사용해야함
+	var minus = function (a,b){
+		var sum = a-b;
+		return sum;
+	}
+	
+	//이름없는 함수 실행 변수로 넣어주고 실행 
+	
+	var result03 = minus(5,4)
+	console.log(result03);
+	
+	
+	 console.log(typeof minus);
+	
+	 
+	 var result04 = minus(6, 2.4);
+	 console.log(result04);
+	 
+	 
+	 var result05 = minus("안녕", "하세요");
+	 console.log(result05);
+	
+	
+	</script>
 
 </body>
 	
