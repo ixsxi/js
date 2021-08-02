@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+	<button id="btn" type="button">li추가</button>>
+</body>
+
+	<script type="text/javascript">
+		$("#btn").on("click",function(){
+			console.log("버튼 클릭");
+			
+			$("ul").append("<li id='fve'>다섯번째아이템입니다.</li>");
+			$("ul").append("<li id='six'>여섯번째아이템입니다.</li>");
+			$("ul").append("<li id='seven'>일곱번째아이템입니다.</li>");
+		});
+	
+		
+		/* 안되는 케이스 정보 불러는거
+		$("li").on("click",function(){
+			console.log("li태그 클릭");
+			var $this = $(this);
+			console.log($this);
+		});
+	   */
+	
+	    //부모한테 (ul) 걸고 위임을 자식한테(li)이벤트 해라
+	   $("ul").on("click","li",function(){
+		  console.log("li태그클릭");
+		  var $this = $(this);
+		  console.log($this);
+		  
+		  $(this).text("주형준");
+		  
+	   });
+	   
+	   
+	
+	</script>
+
+
+</html>
